@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profits</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <section class="titles">
+          <h2>System Allowances Personal Management</h2>
+          <h3>Watch your Incomes & Allowances so easily</h3>
+        </section>
+        <section class="addTransaction">
+          <form>
+            <input id="DescTr" type="text" placeholder="Description of transaction" />
+            <input id="amountTr" type="text" placeholder="The amount" />
+            <div class="radios">
+              <input type="radio" checked name="Type" id="RadioIn" />
+              <label for="RadioIn">Income</label>
+              <input type="radio" name="Type" id="RadioEx" />
+              <label for="RadioEx">Expense</label>
+            </div>
+            <input id="dateTr" type="text" placeholder="Date : MM/DD/YYYY" />
+          </form>
+        </section>
+        <button id="addButton">Add</button>
+      </header>
+      <main>
+        <h3>Transaction Statics</h3>
+        <div class="statics">
+          <section>
+            <h4 class="Balance">
+              The Balance : <span id="balanceTr"></span>
+            </h4>
+          </section>
+          <section>
+            <h4 class="income">
+              The Income : <span id="incomeTr"></span>
+            </h4>
+          </section>
+          <section>
+            <h4 class="allowance">
+              The Expensive : <span id="allowanceTr"></span>
+            </h4>
+          </section>
+          <section>
+            <h4 class="biggestTr">
+              The Biggest : <span id="biggestTr"></span>
+            </h4>
+          </section>
+        </div>
+        <section class="findTransaction">
+          <form>
+            <input id="findTr" type="text" placeholder="Find a transaction" />
+            <div class="radios">
+              <input checked type="radio" id="filterAll" name="filter" />
+              <label for="filterAll">All <span id="filterALLSpan"></span></label>
+              <input type="radio" id="filterAllowance" name="filter" />
+              <label for="filterAllowance">Expensive <span id="filterALLOWANCEspan"></span></label>
+              <input type="radio" id="filterIncome" name="filter" />
+              <label for="filterIncome">Income<span id="filterINCOMEspan"></span></label>
+            </div>
+          </form>
+          <button id="findButton">Find</button>
+        </section>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Description</th>
+              <th>Amount</th>
+              <th>Type</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+        <div class="graphs">
+          <h3>Simple Graph for your transaction:</h3>
+          <canvas id="profitChart" width="400" height="200"> </canvas>
+        </div>
+      </main>
+      <footer>
+        <p>advanced system management 2026 ©</p>
+      </footer>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="main.js"></script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    max-width: 1200px;
+    width: 100%;
+    height: 170vh;
+    display: flex;
+    justify-content: center;
+	background: #eaf6f6;
+}
+.container{
+    width: 90%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+	background:#defcf9;
+    border-radius: 10px;
+}
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.titles{
+    font-size:10px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.titles h2{
+    font-weight: 600;
+    text-transform: uppercase;
+    color:  #66bfbf;
+}
+.titles h3{
+    font-weight: 500;
+    text-transform: capitalize;
+    color:#1f6f78 ;
+}
+.addTransaction{
+    width: 100%;
+}
+.addTransaction form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+.addTransaction form input{
+    width: 80%;
+    height: 25px;
+    text-align: center;
+    background: #eaf6f6;
+    color: #66bfbf;
+    border: 2px solid #66bfbf;
+    border-radius: 4px;
+}
+.addTransaction form input::placeholder,
+.findTransaction form input::placeholder{
+    text-transform: capitalize;
+    color:#347474 ;
+}
+.radios{
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    gap: 5px;
+}
+#RadioIn,
+#RadioEx{
+    width: 15px;
+    cursor: pointer;
+}
+header button{
+    width: 30%;
+    height: 35px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+    background:#42b883 ;
+    font-weight: bold;
+    font-style: italic;
+}
+header button:hover{
+    transform: scale(1.02);
+}
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+}
+main h3{
+    text-align: center;
+}
+.statics{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+.statics section h4{
+    width:100% ;
+    font-size: small;
+    font-weight: 500;
+    text-align: center;
+}
+#Balance,
+#BiggestTr,
+#Income,
+#Allowance{
+    font-weight: 300;
+    text-align: center;
+}
+.findTransaction{
+    width: 100%;
+    text-align: center;
+}
+.findTransaction form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.findTransaction form input{
+    width: 80%;
+    height: 25px;
+    text-align: center;
+    background: #eaf6f6;
+    color: #66bfbf;
+    border: 2px solid #66bfbf;
+    border-radius: 4px;
+}
+#inCome,
+#Expensive,
+#filterAll,
+#filterAllowance,
+#filterIncome{
+    width: 12px;
+    cursor: pointer;
+}
+main button{
+    width: 30%;
+    height: 35px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+    background:#42b883 ;
+    font-weight: bold;
+    font-style: italic;
+}
+main button:hover{
+    transform: scale(1.02);
+}
+table{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+table tbody tr td{
+    padding: 2px;
+}
+.btn{
+    width: 100%;
+    height: 20px;
+}
+.graphs{
+    width: 100%;
+    text-align: center;
+}
+footer{
+    color: #1f6f78;
+}
+
+@media (min-width:320px) and (max-width:465px){
+    body{
+        height: 200vh;
+    }
+    .container{
+        height: fit-content;
+    }
+    table{
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    body{
+        height: 200vh;
+    }
+    .container{
+        height: fit-content;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .container{
+        width: 70%;
+        height: fit-content;
+    }
+}
+@media (min-width:1440px){
+    body{
+        margin: 0 auto;
+    }
+    .container{
+        width: 80%;
+        margin: 0 auto;
+    }
+}
